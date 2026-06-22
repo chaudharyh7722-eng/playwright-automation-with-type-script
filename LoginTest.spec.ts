@@ -3,7 +3,7 @@ import {LoginPage} from "../pages/LoginPage";
 test.use({
     headless:false
 });
-const baseUrl = ("https://atlas.rewathi.com/login");
+const baseUrl = ("https://.........com/login");
 test.beforeEach(async({page})=>
     {
     await page.goto(baseUrl);
@@ -31,7 +31,7 @@ const logindata=[
     ['notregistered@gmail.com', 'Password@123'],
     ['dummy@test.com', 'Password@123'],
     // Registered Email + Wrong Password
-    ['hemant.rewathi@gmail.com', 'WrongPassword123'],
+    ['surtja@gmail.com', 'Sys@1234'],
     ['hemant.rewathi@gmail.com', '123456'],
     // Invalid Password Formats
     ['test@gmail.com', '123'],
@@ -59,7 +59,7 @@ for(const[email, password] of logindata){
 }
 // test.only('login with valid credentials',async ({page})=>{
 //  const loginPage = new LoginPage(page);
-//  await loginPage.getLogin('hemant.rewathi@gmail.com', 'Hemantchaudhary@123');
+//  await loginPage.getLogin('...........', '............');
 //  const currenturl = page.url();
 //  console.log(currenturl);
 
@@ -68,10 +68,10 @@ test.only('login with valid credentials', async ({ page }) => {
   const loginPage = new LoginPage(page);
 
   await loginPage.getLogin(
-    'hemant.rewathi@gmail.com',
-    'Hemantchaudhary@123'
+    '.........@gmail.com',
+    '..........3'
   );
-  const expectedUrl = "https://atlas.rewathi.com/user/dashboard";
+  const expectedUrl = "https://.........../user/dashboard";
   const currentUrl = page.url();
   if(currentUrl === expectedUrl){
     console.log("Login successful, navigated to the dashboard.");
