@@ -5,7 +5,7 @@ test.use({
     headless:false
 })
 
-    const baseUrl =("https://atlas.rewathi.com/login");
+    const baseUrl =("https://........../login");
     test.beforeEach(({page})=>{
         page.goto(baseUrl);
     }); 
@@ -52,7 +52,7 @@ test('forgot email with valid email',async({page})=>
     {
         try{
             const forgotEmail = new ForgotEmailPage(page);
-            await forgotEmail.getForgotEmail('hemant.rewathi@gmail.com');
+            await forgotEmail.getForgotEmail('...............com');
             await page.url();
             console.log("Current URL after submitting valid email: " + page.url());
             
