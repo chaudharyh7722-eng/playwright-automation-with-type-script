@@ -2,14 +2,14 @@ import {expect, test} from "@playwright/test";
 import {HomePage} from "../page/homePage";
 import { LoginPage } from "../page/login_page";
 
-const baseUrl = "https://atlas.rewathi.com/login";
+const baseUrl = "https://............../login";
 
 test.beforeEach(async ({ page }) => {
     await page.goto(baseUrl);
     const loginPage = new LoginPage(page);
     await loginPage.getLogin(
-        'hemant.rewathi@gmail.com',
-        'Hemantchaudhary@123'
+        '.............com',
+        '.............123'
     );
     await expect(page).toHaveURL(
         'https://atlas.rewathi.com/user/dashboard'
